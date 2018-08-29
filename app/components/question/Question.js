@@ -5,11 +5,27 @@ import styles from './Styles';
 export default class Quote extends Component {
 
 state = {
-    fadeAnim: new Animated.Value(0),  // Initial value for opacity: 0  
+    fadeAnim: new Animated.Value(0), 
+    positionAnim:  new Animated.Value(0),
 }
 
 componentDidMount () {
-    //   Add Animation sequence
+  Animated.sequence([
+    Animated.timing(
+        this.state.fadeAnim,       
+        {
+          toValue: 1,               
+          duration: 350,            
+        }
+      ),
+      Animated.timing(
+        this.state.positionAnim,       
+        {
+          toValue: 1,               
+          duration: 1000,            
+        }
+      ) 
+  ]).start();
 }
 
 render () {
@@ -19,12 +35,22 @@ render () {
     let { fadeAnim } = this.state;
 
         return (
-            <View>
+            <Animated.View
+                    style={{
+                    opacity: fadeAnim, 
+                    transform: [{
+                        translateY: this.state.positionAnim.interpolate({
+                        inputRange: [0, 1],
+                        outputRange: [100, 0]
+                        }),
+                    }]
+                    }}
+                >
 
-            <Text style={styles.questionHeading}>Today's Question</Text>
-            <Text style={styles.question}>{question}</Text>
+                <Text style={styles.questionHeading}>Today's Question</Text>
+                <Text style={styles.question}>{question}</Text>
 
-            </View>
+            </Animated.View>
 
         );
     }

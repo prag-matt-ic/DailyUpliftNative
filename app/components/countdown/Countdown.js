@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { AppRegistry } from 'react-native';
 import TimerCountdown from 'react-native-timer-countdown';
-import ProgressBars from './progressBars/ProgressBars';
+// import ProgressBars from './progressBars/ProgressBars';
 
 import colours from '../Colours';
 

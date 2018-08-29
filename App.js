@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
+
 import { LayoutAnimation } from 'react-native';
 
 import Container from './app/components/container/Container';
 import Quote from './app/components/quote/Quote';
 import Countdown from './app/components/countdown/Countdown';
-
 import Question from './app/components/question/Question';
 
 export default class App extends Component {
@@ -17,7 +17,8 @@ constructor() {
 }
 
 timeElapsedHandler = () => {
-  this.setState({showQuote:false});
+  LayoutAnimation.linear();
+  this.setState({showQuote: false});
 }
 
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AppRegistry, Animated, Text } from 'react-native';
+import { AppRegistry, View, Animated, Text } from 'react-native';
 import styles from './Styles';
 
 export default class Quote extends Component {
@@ -9,12 +9,11 @@ state = {
 }
 
 componentDidMount () {
-    Animated.timing(                  // Animate over time
+    Animated.timing(                  // Animate over time OR SPRING or DECAY
         this.state.fadeAnim,            // The animated value to drive
         {
           toValue: 1,                   // Animate to opacity: 1 (opaque)
-          duration: 1200,              // Make it take a while
-          
+          duration: 2300,              // Make it take a while
         }
       ).start(); 
 }
@@ -26,23 +25,44 @@ render () {
     let { fadeAnim } = this.state;
 
         return (
-            <Animated.View                 // Special animatable View
-                style={{
-                ...styles.view,
-                opacity: fadeAnim,         // Bind opacity to animated value
-                }}
-            >
-            <Text 
-                style={styles.quote}
-                adjustsFontSizeToFit={true}
-                minimumFontScale={0.6}
-                >"{quote}"</Text>
-            
-            <Text
-                style={styles.author}
-                >- {author}</Text>
 
-            </Animated.View>
+            <View style={styles.view}>
+                <Animated.View
+                    style={{
+                    // ...styles.textView, To spread existing styles
+                    opacity: fadeAnim, 
+                    transform: [{
+                        translateY: this.state.fadeAnim.interpolate({
+                        inputRange: [0, 0.6, 1],
+                        outputRange: [-30, 0, 0]
+                        }),
+                    }]
+                    }}
+                >
+                    <Text 
+                        style={styles.quote}
+                        adjustsFontSizeToFit={true}
+                        minimumFontScale={0.6}
+                        >"{quote}"</Text>
+                </Animated.View>
+            
+                <Animated.View 
+                    style={{
+                    opacity: fadeAnim, 
+                    transform: [{
+                        translateY: this.state.fadeAnim.interpolate({
+                        inputRange: [0, 1],
+                        outputRange: [20, 0]
+                        }),
+                    }]
+                    }}
+                >
+                    <Text
+                        style={styles.author}
+                        >- {author}</Text>
+                </Animated.View>
+            </View>
+           
         );
     }
 }
