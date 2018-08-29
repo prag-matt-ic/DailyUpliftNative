@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import colours from '../Colours';
+import typography from '../Typography';
 
 export default styles = StyleSheet.create({
 
@@ -10,18 +10,15 @@ export default styles = StyleSheet.create({
       },
 
     quote: {
-        fontFamily: 'Berkshire Swash',
-        fontSize: 42,
-        lineHeight: 55,
-        letterSpacing: 0.2,
-        color: colours.offWhite,
+        ...typography.heading,
+        color: '#FFF',
+        fontSize: 50,
     },
 
     author: {
-        fontFamily: 'Noto Serif',
-        fontWeight: '400',
+        ...typography.bold,
         fontSize: 24,
-        color: colours.yellow,
+        color: '#FFF',
         marginTop: 40
     }
 

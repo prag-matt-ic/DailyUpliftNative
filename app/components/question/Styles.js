@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import colours from '../Colours';
+import typography from '../Typography';
 
 export default styles = StyleSheet.create({
 
@@ -10,19 +10,15 @@ export default styles = StyleSheet.create({
       },
 
     questionHeading : {
-        fontFamily: 'Noto Serif',
+         ...typography.heading,
         fontSize: 18,
-        color: colours.yellow
+        color: '#FFF'
     },
 
     question: {
-        fontFamily: 'Noto Serif',
-        fontSize: 20,
-        fontWeight: '700',
-        lineHeight: 28,
-        letterSpacing: 0.2,
+        ...typography.body,
         marginTop: 30,
-        color: colours.offWhite,
+        color: '#FFF',
     }
 
 });
