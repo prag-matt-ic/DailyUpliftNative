@@ -13,7 +13,7 @@ componentDidMount () {
         this.state.fadeAnim,            // The animated value to drive
         {
           toValue: 1,                   // Animate to opacity: 1 (opaque)
-          duration: 2300,              // Make it take a while
+          duration: 2000,              // Make it take a while
         }
       ).start(); 
 }
@@ -48,7 +48,10 @@ render () {
             
                 <Animated.View 
                     style={{
-                    opacity: fadeAnim, 
+                    opacity: this.state.fadeAnim.interpolate({
+                        inputRange: [0, 0.5, 1],
+                        outputRange: [0, 0, 1]
+                        }),
                     transform: [{
                         translateY: this.state.fadeAnim.interpolate({
                         inputRange: [0, 1],

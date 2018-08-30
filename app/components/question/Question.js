@@ -37,16 +37,17 @@ render () {
         return (
             <Animated.View
                     style={{
+                    ...styles.view,
                     opacity: fadeAnim, 
                     transform: [{
                         translateY: this.state.positionAnim.interpolate({
                         inputRange: [0, 1],
-                        outputRange: [100, 0]
+                        outputRange: [30, 0]
                         }),
                     }]
                     }}
                 >
-
+                
                 <Text style={styles.questionHeading}>Today's Question</Text>
                 <Text style={styles.question}>{question}</Text>
 

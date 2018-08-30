@@ -20,6 +20,6 @@ export default styles = StyleSheet.create({
         fontSize: 24,
         color: '#FFF',
         marginTop: 40
-    }
+    },
 
 });

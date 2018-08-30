@@ -1,26 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { AppRegistry, View } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
 import styles from './Styles';
-import gradients from './Gradients';
-// import colours from '../Colours';
 
-export default class Container extends Component {
+
+export default class Container extends React.Component {
 
 render () {
 
-    const gradient = gradients[Math.floor(Math.random() * (gradients.length) )];
-    console.log('Gradient Name:', gradient.name)
+    
+    // console.log('Gradient Name:', gradient.name)
 
         return (
             <LinearGradient 
-                colors={gradient.colors} 
+                colors={this.props.gradientColours} 
                 style={styles.background}
                 start={{x: 0.0, y: 0.0}} end={{x: 0.95, y: 1.0}}
                 // locations={[0.1,0.9]}
             >
-                <View>
+                <View style={styles.view}>
 
                     {this.props.children}
 
