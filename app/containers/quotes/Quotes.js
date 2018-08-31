@@ -9,7 +9,7 @@ export default class Quotes extends React.Component {
   render() {
       return (
         <View style={styles.view}>
-          <Quote /> 
+          <Quote quote={this.props.quote}/> 
           <Countdown 
             onTimeElapsed={this.props.handleTimeElapsed} 
           />

@@ -4,8 +4,13 @@ import styles from './Styles';
 
 export default class Quote extends Component {
 
-state = {
-    fadeAnim: new Animated.Value(0),  // Initial value for opacity: 0  
+constructor(props) {
+    super(props)
+    this.state = {
+        quote: this.props.quote.text,
+        author: this.props.quote.source,
+        fadeAnim: new Animated.Value(0),  // Initial value for opacity: 0  
+    }
 }
 
 componentDidMount () {
@@ -20,8 +25,8 @@ componentDidMount () {
 
 render () {
 
-    let quote = 'Keep your eyes on the stars, and your feet on the ground.'
-    let author = 'Theodore Roosevelt'
+    // let quote = 'Keep your eyes on the stars, and your feet on the ground.'
+    // let author = 'Theodore Roosevelt'
     let { fadeAnim } = this.state;
 
         return (
@@ -43,7 +48,7 @@ render () {
                         style={styles.quote}
                         adjustsFontSizeToFit={true}
                         minimumFontScale={0.6}
-                        >"{quote}"</Text>
+                        >"{this.state.quote}"</Text>
                 </Animated.View>
             
                 <Animated.View 
@@ -62,7 +67,7 @@ render () {
                 >
                     <Text
                         style={styles.author}
-                        >- {author}</Text>
+                        >- {this.state.author}</Text>
                 </Animated.View>
             </View>
            

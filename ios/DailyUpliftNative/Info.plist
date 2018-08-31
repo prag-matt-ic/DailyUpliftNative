@@ -53,9 +53,11 @@
 	</dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Noto Serif Bold.ttf</string>
-		<string>Noto Serif.ttf</string>
-		<string>Berkshire Swash Regular.ttf</string>
+		<string>Assistant Bold.ttf</string>
+		<string>Assistant ExtraBold.ttf</string>
+		<string>Assistant Regular.ttf</string>
+		<string>Assistant SemiBold.ttf</string>
+		<string>Assistant-Regular.ttf</string>
 	</array>
 </dict>
 </plist>

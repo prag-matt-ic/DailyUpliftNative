@@ -8,10 +8,6 @@ import styles from './Styles';
 export default class Container extends React.Component {
 
 render () {
-
-    
-    // console.log('Gradient Name:', gradient.name)
-
         return (
             <LinearGradient 
                 colors={this.props.gradientColours} 

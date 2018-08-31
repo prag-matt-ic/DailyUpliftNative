@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -47,6 +46,11 @@
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		BE53ACB3AF6990A9A6C211C4 /* libPods-DailyUpliftNative-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58A2F2CE623BDC1AD0E6E990 /* libPods-DailyUpliftNative-tvOSTests.a */; };
 		D2F6FEEBC94B402280944649 /* libRNFirebase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B238FA7D2CF849A3ADDB6F1D /* libRNFirebase.a */; };
+		5EC61247C7FC4A488ED8CE33 /* Assistant Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 171D113066A9497BA9615494 /* Assistant Bold.ttf */; };
+		9805FD6C5E2145978DE01F6D /* Assistant ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AEA0A7BBE104B17835C3E57 /* Assistant ExtraBold.ttf */; };
+		CD37112DE665479D9A30E52D /* Assistant Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 738E5719232548DE8AA94E55 /* Assistant Regular.ttf */; };
+		D82F8F2827F94100BBEE1C45 /* Assistant SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81428743F1EB4752AE35AB6B /* Assistant SemiBold.ttf */; };
+		195974AF43124AE1A883ABC1 /* Assistant-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19A860CF49734B7BA8F1B18B /* Assistant-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -389,6 +393,11 @@
 		DFD2E1F6B8831ADC4C68506E /* Pods-DailyUpliftNative-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyUpliftNative-tvOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyUpliftNative-tvOSTests/Pods-DailyUpliftNative-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED455D2166484F3FA9E24D5C /* RNFirebase.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNFirebase.xcodeproj; path = "../node_modules/react-native-firebase/ios/RNFirebase.xcodeproj"; sourceTree = "<group>"; };
 		F134BEB52F9811F25BDE9FAB /* Pods-DailyUpliftNative-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyUpliftNative-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DailyUpliftNative-tvOSTests/Pods-DailyUpliftNative-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		171D113066A9497BA9615494 /* Assistant Bold.ttf */ = {isa = PBXFileReference; name = "Assistant Bold.ttf"; path = "../assets/fonts/Assistant/Assistant Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8AEA0A7BBE104B17835C3E57 /* Assistant ExtraBold.ttf */ = {isa = PBXFileReference; name = "Assistant ExtraBold.ttf"; path = "../assets/fonts/Assistant/Assistant ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		738E5719232548DE8AA94E55 /* Assistant Regular.ttf */ = {isa = PBXFileReference; name = "Assistant Regular.ttf"; path = "../assets/fonts/Assistant/Assistant Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		81428743F1EB4752AE35AB6B /* Assistant SemiBold.ttf */ = {isa = PBXFileReference; name = "Assistant SemiBold.ttf"; path = "../assets/fonts/Assistant/Assistant SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		19A860CF49734B7BA8F1B18B /* Assistant-Regular.ttf */ = {isa = PBXFileReference; name = "Assistant-Regular.ttf"; path = "../assets/fonts/Assistant/Assistant-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -708,6 +717,11 @@
 				D96EE0A51A2E43058F2BF1CC /* Noto Serif Bold.ttf */,
 				24C3A18C4183402F89DEDFEC /* Noto Serif.ttf */,
 				859B00A88DAE4792BBA20FFB /* Berkshire Swash Regular.ttf */,
+				171D113066A9497BA9615494 /* Assistant Bold.ttf */,
+				8AEA0A7BBE104B17835C3E57 /* Assistant ExtraBold.ttf */,
+				738E5719232548DE8AA94E55 /* Assistant Regular.ttf */,
+				81428743F1EB4752AE35AB6B /* Assistant SemiBold.ttf */,
+				19A860CF49734B7BA8F1B18B /* Assistant-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1200,6 +1214,11 @@
 				5F88F4D508204DA6AE1F9795 /* Noto Serif.ttf in Resources */,
 				535E0DF94B6A449F86F34602 /* Berkshire Swash Regular.ttf in Resources */,
 				A03E5A1C21387541008807BB /* GoogleService-Info.plist in Resources */,
+				5EC61247C7FC4A488ED8CE33 /* Assistant Bold.ttf in Resources */,
+				9805FD6C5E2145978DE01F6D /* Assistant ExtraBold.ttf in Resources */,
+				CD37112DE665479D9A30E52D /* Assistant Regular.ttf in Resources */,
+				D82F8F2827F94100BBEE1C45 /* Assistant SemiBold.ttf in Resources */,
+				195974AF43124AE1A883ABC1 /* Assistant-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

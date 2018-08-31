@@ -23,11 +23,11 @@ render () {
             <React.Fragment>
                 
                  <TimerCountdown
-                    initialSecondsRemaining={1000 * 3}
+                    initialSecondsRemaining={1000 * 10}
                     onTick={secondsRemaining => this.handleTick(secondsRemaining)}
                     interval={1000}
                     onTimeElapsed={this.props.onTimeElapsed}
-                    style={{ fontFamily: 'Noto Serif', fontSize: 18, color: colours.dark }}
+                    style={{ fontSize: 18, color: '#FFF'}}
                 />
 
              {/* <ProgressBars 

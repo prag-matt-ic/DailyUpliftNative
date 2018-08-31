@@ -19,4 +19,20 @@ export default gradients = [
     { name: 'King Yna', colors: ['#1a2a6c', '#b21f1f', '#fdbb2d'] },
     
     { name: 'Kimoby is the new blue', colors: ['#396afc', '#2948ff'] },
+
+
+    { name: 'original1', colors: ['#FFD200', '#F7971E'] },
+
+    { name: 'original2', colors: ['#11998E', '#2948ff'] },
+
+    { name: 'original3', colors: ['#00C6FF', '#0072FF'] },
+
+    { name: 'original4', colors: ['#CB356B', '#BD3F32'] },
+
+    { name: 'original5', colors: ['#FF512F', '#F08019'] },
+
+    { name: 'original6', colors: ['#AA076B', '#61045F'] },
+
+    { name: 'original7', colors: ['#43CEA2', '#185A9D'] },
+
 ];
