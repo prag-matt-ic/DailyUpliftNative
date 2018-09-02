@@ -10,7 +10,7 @@ import Quotes from './app/containers/quotes/Quotes';
 import Question from './app/components/question/Question';
 import Loading from './app/components/loading/Loading';
 
-var database = firebase.database();
+let database = firebase.database();
 
 export default class App extends React.Component {
 
@@ -46,16 +46,13 @@ componentDidMount = () => {
 
   const getLocalLibraryVersion = this._retrieveData('libraryVersion');
 
-
   Promise.all([getLocalLibraryVersion, getOnlineLibraryVersion]).then((results) => {
 
     if (results[0] !== results[1]) {
-
         console.log('Online version differs to local version. Online version:', results[0], ' : ', results[1]);
         return this.downloadLibrary(results[1]);
     
       } else {
-
         console.log('Library is up to date');
         return this.loadDailyUplift()
       }
@@ -63,7 +60,6 @@ componentDidMount = () => {
     }).catch(this.failureCallback())
 
 }
-
 
 
 failureCallback() {
